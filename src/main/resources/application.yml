@@ -1,0 +1,51 @@
+server:
+  port: 8081
+
+spring:
+  thymeleaf:
+    encoding: UTF-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+    check-template: true
+    cache: false
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 765875306
+
+  hibernate:
+    show_sql: true
+    format_sql: true
+    ejb.naming_strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hbm2ddl.auto: update
+
+  jpa:
+    generate-ddl: true
+
+#security:
+ # basic:
+ #   enabled: true
+  #  path: /login
+  #user:
+ #   name: admin #认证使用的用户名
+ #   password: 123
+
+logging:
+  #配置日志文件路径
+  path: C:\Users\76587\Desktop\proj2\log
+  level:
+    xatu.zsl: debug #不同目录下的日志可配置不同级别
+    org.springfromework.web: info
+    org.hibernate: error
+
+management:
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
