@@ -1,0 +1,29 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  secutiry:
+    enabled: false
+
+spring:
+  application:
+    name: SJTU_SE
+
+server:
+  port: 9001
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+info:
+   app:
+      name: spring-boot-actuator
+      version: sjtu.1.0
+
+zuul:
+  routes:
+    zuul:
+      path: /zuul/**
+
