@@ -1,7 +1,7 @@
 # spring micro-service practice:
 
-### springboot springcloud
+### springboot + springcloud
+### log4j & actuator
 ### security
-### log4j
-### eureka(registry+discovery)
+### eureka (service registry+discovery)
 ### zuul
